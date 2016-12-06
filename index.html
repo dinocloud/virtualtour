@@ -10,8 +10,11 @@
 
     <style>
     #panorama {
-        width: 1200px;
-        height: 800px;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
     }
     </style>
 </head>
@@ -23,23 +26,18 @@ pannellum.viewer('panorama', {
     "type": "equirectangular",
     "panorama": "img/sample-4k.jpeg",
     "autoLoad": true,
-    "autoRotate": -2,
-    "autoRotateInactivityDelay": 2000,
     "preview": "img/preview.jpg",
     "title": "Johnny B Good",
     "author": "Tours360",
     "compass": true,
-    "northOffset": 247.5,
-    "pitch": 2.3,
-    "yaw": -135.4,
-    "hfov": 120
+    "northOffset": 247.5
 });
 </script>
 
 	<p>This Example just print's the raw accelerometer and gyro data. Will return null if no device information is found.</p>
 	<p>gyro.getFeatures: <span id="features"></span></p>
 	<span id="example"></span>
-	<script src="../js/gyro.js"></script>
+	<script src="js/gyro.js"></script>
 	<script>
 		gyro.startTracking(function(o) {
 			var b = document.getElementById('example'),
