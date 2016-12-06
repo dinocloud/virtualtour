@@ -27,8 +27,8 @@ function initialize() {
 
 function getCustomPanoramaTileUrl(panoID, zoom, tileX, tileY) {
   // Return a pano image given the panoID.
-  // return "ardenwood_tiles/" + panoID + '/'  + tileX + '-' +tileY + '_s1.jpg';
-  return "img/restaurant/" + panoID + ".jpg" ;
+  // return "img/restaurant/ardenwood_tiles/" + panoID + '/'  + tileX + '-' +tileY + '_s1.jpg';
+  return "http://tours-360.s3-us-west-2.amazonaws.com/restaurant/" + panoID + ".jpg" ;
 }
 
 function getCustomPanorama(panoID) {
