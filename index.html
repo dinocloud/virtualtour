@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple example</title>
+    <link rel="stylesheet" href="css/pannellum.css"/>
+    <script type="text/javascript" src="js/pannellum.js"></script>
+    <script src="js/gyro.js"></script>
+
+    <style>
+    #panorama {
+        width: 1200px;
+        height: 800px;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {
+    "type": "equirectangular",
+    "panorama": "img/sample-4k.jpeg",
+    "autoLoad": true,
+    "autoRotate": -2,
+    "autoRotateInactivityDelay": 2000,
+    "preview": "img/preview.jpg",
+    "title": "Johnny B Good",
+    "author": "Tours360",
+    "compass": true,
+    "northOffset": 247.5,
+    "pitch": 2.3,
+    "yaw": -135.4,
+    "hfov": 120
+});
+</script>
+
+	<p>This Example just print's the raw accelerometer and gyro data. Will return null if no device information is found.</p>
+	<p>gyro.getFeatures: <span id="features"></span></p>
+	<span id="example"></span>
+	<script src="../js/gyro.js"></script>
+	<script>
+		gyro.startTracking(function(o) {
+			var b = document.getElementById('example'),
+					f = document.getElementById('features');
+			f.innerHTML = gyro.getFeatures();
+			b.innerHTML = "<p> x = " + o.x + "</p>" +
+										"<p> y = " + o.y + "</p>" +
+										"<p> z = " + o.z + "</p>" +
+										"<p> alpha = " + o.alpha + "</p>" +
+										"<p> beta = " + o.beta + "</p>" +
+										"<p> gamma = " + o.gamma + "</p>";
+		});
+</script>
+
+</body>
+</html>
