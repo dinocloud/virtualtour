@@ -1,0 +1,12 @@
+{
+  "name": "virtual-tours",
+    "dependencies": {
+    "angular": "~1.2.19",
+    "bootstrap": "~3.2.0",
+    "bootstrap-fileinput": ">=0",
+    "toastr": "~2.0.3",
+    "aws-sdk-js": "~2.0.9",
+    "ng-droplet" : ">=0",
+    "progressbar.js" : ">=0"
+  }
+}
